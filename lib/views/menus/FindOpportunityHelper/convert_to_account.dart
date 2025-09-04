@@ -98,6 +98,10 @@ class _ConvertToAccountState extends State<ConvertToAccountPage> {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     } else {
+      var defValue = Map();
+     defValue['key'] = "0000";
+     defValue['value'] = "All India/Multiple Locations";
+     AfsMap.add(defValue);
       var response = await http.get(
         Uri.parse(BASE_URI +
             (_DSARole

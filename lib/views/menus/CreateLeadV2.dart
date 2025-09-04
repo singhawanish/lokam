@@ -954,129 +954,291 @@ class _CreateLeadV2State extends State<CreateLeadV2Page> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  child: const SizedBox(
-                                    height: 40,
-                                  ),
-                                ),
-                                Text(
-                                  '*Email ID',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                Container(
-                                  child: const SizedBox(
-                                    height: 10,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 20, right: 20),
-                                  child: Theme(
-                                    data: ThemeData(
-                                        primaryColor:
-                                            CustomTheme.buildLightTheme()
-                                                .primaryColor),
-                                    child: TextFormField(
-                                      controller: _emailIdFieldController,
-                                      decoration: InputDecoration(
-                                          border: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: CustomTheme
-                                                          .buildLightTheme()
-                                                      .primaryColor)),
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20.0),
-                                            borderSide: BorderSide(
-                                              color:
-                                                  CustomTheme.buildLightTheme()
-                                                      .primaryColor,
+                                functionValue == 'AVIATION'
+                                    ? Column(children: [
+                                        Container(
+                                          child: const SizedBox(
+                                            height: 40,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Email ID',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        Container(
+                                          child: const SizedBox(
+                                            height: 10,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 20, right: 20),
+                                          child: Theme(
+                                            data: ThemeData(
+                                                primaryColor: CustomTheme
+                                                        .buildLightTheme()
+                                                    .primaryColor),
+                                            child: TextFormField(
+                                              controller:
+                                                  _emailIdFieldController,
+                                              decoration: InputDecoration(
+                                                  border: UnderlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                          color: CustomTheme
+                                                                  .buildLightTheme()
+                                                              .primaryColor)),
+                                                  enabledBorder:
+                                                      UnderlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                    borderSide: BorderSide(
+                                                      color: CustomTheme
+                                                              .buildLightTheme()
+                                                          .primaryColor,
+                                                    ),
+                                                  ),
+                                                  counterText: "",
+                                                  hintText:
+                                                      'Email ID of Company',
+                                                  hintStyle: TextStyle(
+                                                      fontStyle:
+                                                          FontStyle.italic)),
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              // validator: (value) {
+                                              //   if (value == null ||
+                                              //       value.isEmpty) {
+                                              //     return "Please enter email";
+                                              //   }
+                                              //   // Email validation regex
+                                              //   final emailRegex = RegExp(
+                                              //       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+                                              //   if (!emailRegex
+                                              //       .hasMatch(value)) {
+                                              //     return "Please enter a valid email address";
+                                              //   }
+                                              //   return null;
+                                              // },
+                                              maxLength: 200,
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                              ),
                                             ),
                                           ),
-                                          counterText: "",
-                                          hintText: 'Email ID of Company',
-                                          hintStyle: TextStyle(
-                                              fontStyle: FontStyle.italic)),
-                                      keyboardType: TextInputType.emailAddress,
-                                      validator: (value) {
-                                        if (value == null || value.isEmpty) {
-                                          return "Please enter email";
-                                        }
-                                        // Email validation regex
-                                        final emailRegex = RegExp(
-                                            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-                                        if (!emailRegex.hasMatch(value)) {
-                                          return "Please enter a valid email address";
-                                        }
-                                        return null;
-                                      },
-                                      maxLength: 200,
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  child: const SizedBox(
-                                    height: 40,
-                                  ),
-                                ),
-                                Text(
-                                  '*Mobile No',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                Container(
-                                  child: const SizedBox(
-                                    height: 10,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 20, right: 20),
-                                  child: Theme(
-                                    data: ThemeData(
-                                        primaryColor:
-                                            CustomTheme.buildLightTheme()
-                                                .primaryColor),
-                                    child: TextFormField(
-                                      controller: _mobileFieldController,
-                                      decoration: InputDecoration(
-                                          border: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: CustomTheme
-                                                          .buildLightTheme()
-                                                      .primaryColor)),
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20.0),
-                                            borderSide: BorderSide(
-                                              color:
-                                                  CustomTheme.buildLightTheme()
-                                                      .primaryColor,
+                                        ),
+                                        Container(
+                                          child: const SizedBox(
+                                            height: 40,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Mobile No',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        Container(
+                                          child: const SizedBox(
+                                            height: 10,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 20, right: 20),
+                                          child: Theme(
+                                            data: ThemeData(
+                                                primaryColor: CustomTheme
+                                                        .buildLightTheme()
+                                                    .primaryColor),
+                                            child: TextFormField(
+                                              controller:
+                                                  _mobileFieldController,
+                                              decoration: InputDecoration(
+                                                  border: UnderlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                          color: CustomTheme
+                                                                  .buildLightTheme()
+                                                              .primaryColor)),
+                                                  enabledBorder:
+                                                      UnderlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.0),
+                                                    borderSide: BorderSide(
+                                                      color: CustomTheme
+                                                              .buildLightTheme()
+                                                          .primaryColor,
+                                                    ),
+                                                  ),
+                                                  counterText: "",
+                                                  hintText:
+                                                      'Mobile Numer of Company',
+                                                  hintStyle: TextStyle(
+                                                      fontStyle:
+                                                          FontStyle.italic)),
+                                              keyboardType:
+                                                  TextInputType.number,
+                                              maxLength: 10,
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                              ),
                                             ),
                                           ),
-                                          counterText: "",
-                                          hintText: 'Mobile Numer of Company',
-                                          hintStyle: TextStyle(
-                                              fontStyle: FontStyle.italic)),
-                                      keyboardType: TextInputType.number,
-                                      maxLength: 10,
-                                      style: TextStyle(
-                                        fontSize: 18,
+                                        ),
+                                        Container(
+                                          child: const SizedBox(
+                                            height: 40,
+                                          ),
+                                        ),
+                                      ])
+                                    : Column(
+                                        children: [
+                                          Container(
+                                            child: const SizedBox(
+                                              height: 40,
+                                            ),
+                                          ),
+                                          Text(
+                                            '*Email ID',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                          Container(
+                                            child: const SizedBox(
+                                              height: 10,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20, right: 20),
+                                            child: Theme(
+                                              data: ThemeData(
+                                                  primaryColor: CustomTheme
+                                                          .buildLightTheme()
+                                                      .primaryColor),
+                                              child: TextFormField(
+                                                controller:
+                                                    _emailIdFieldController,
+                                                decoration: InputDecoration(
+                                                    border: UnderlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            color: CustomTheme
+                                                                    .buildLightTheme()
+                                                                .primaryColor)),
+                                                    enabledBorder:
+                                                        UnderlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0),
+                                                      borderSide: BorderSide(
+                                                        color: CustomTheme
+                                                                .buildLightTheme()
+                                                            .primaryColor,
+                                                      ),
+                                                    ),
+                                                    counterText: "",
+                                                    hintText:
+                                                        'Email ID of Company',
+                                                    hintStyle: TextStyle(
+                                                        fontStyle:
+                                                            FontStyle.italic)),
+                                                keyboardType:
+                                                    TextInputType.emailAddress,
+                                                validator: (value) {
+                                                  if (value == null ||
+                                                      value.isEmpty) {
+                                                    return "Please enter email";
+                                                  }
+                                                  // Email validation regex
+                                                  final emailRegex = RegExp(
+                                                      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+                                                  if (!emailRegex
+                                                      .hasMatch(value)) {
+                                                    return "Please enter a valid email address";
+                                                  }
+                                                  return null;
+                                                },
+                                                maxLength: 200,
+                                                style: TextStyle(
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            child: const SizedBox(
+                                              height: 40,
+                                            ),
+                                          ),
+                                          Text(
+                                            '*Mobile No',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                          Container(
+                                            child: const SizedBox(
+                                              height: 10,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 20, right: 20),
+                                            child: Theme(
+                                              data: ThemeData(
+                                                  primaryColor: CustomTheme
+                                                          .buildLightTheme()
+                                                      .primaryColor),
+                                              child: TextFormField(
+                                                controller:
+                                                    _mobileFieldController,
+                                                decoration: InputDecoration(
+                                                    border: UnderlineInputBorder(
+                                                        borderSide: BorderSide(
+                                                            color: CustomTheme
+                                                                    .buildLightTheme()
+                                                                .primaryColor)),
+                                                    enabledBorder:
+                                                        UnderlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0),
+                                                      borderSide: BorderSide(
+                                                        color: CustomTheme
+                                                                .buildLightTheme()
+                                                            .primaryColor,
+                                                      ),
+                                                    ),
+                                                    counterText: "",
+                                                    hintText:
+                                                        'Mobile Numer of Company',
+                                                    hintStyle: TextStyle(
+                                                        fontStyle:
+                                                            FontStyle.italic)),
+                                                keyboardType:
+                                                    TextInputType.number,
+                                                maxLength: 10,
+                                                style: TextStyle(
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            child: const SizedBox(
+                                              height: 40,
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  child: const SizedBox(
-                                    height: 40,
-                                  ),
-                                ),
                                 Text(
                                   'Website',
                                   style: TextStyle(
