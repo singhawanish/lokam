@@ -8,8 +8,8 @@ import 'data_providers/auth_data_provider.dart';
 import 'data_providers/auth_provider.dart';
 import 'views/menus/homeScreen.dart';
 
-// const BASE_URI = "https://spandan.indianoil.co.in/MobileApp/HMOFMOAppBE";
-const BASE_URI = "https://parikshan.indianoil.co.in/MobileApp/HMOFMOAppBE";
+const BASE_URI = "https://spandan.indianoil.co.in/MobileApp/HMOFMOAppBE";
+// const BASE_URI = "https://parikshan.indianoil.co.in/MobileApp/HMOFMOAppBE";
 // const BASE_URI =
 //     "https://spandan.indianoil.co.in/MobileApp/IOCHardwareComplaintBE/HMOFMOAppBE";
 final storage = FlutterSecureStorage();
